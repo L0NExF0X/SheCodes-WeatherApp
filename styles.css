@@ -1,0 +1,62 @@
+h1 {
+  margin-top: 15px;
+}
+
+h2 {
+  font-size: 48px;
+  margin-top: 20px;
+}
+
+.weather {
+  border: 1px solid #acacac;
+  border-radius: 10px;
+  background-image: linear-gradient(to top, #ebc0fd 0%, #d9ded8 100%);
+  margin: 20px auto;
+  max-width: 750px;
+  padding: 15px;
+}
+
+.rain-cloud {
+  font-size: 105px;
+  margin-top: 30px;
+  color: #203c5a;
+}
+
+.card {
+  word-wrap: normal;
+}
+
+.cloudy,
+.heavy-showers,
+.sun-rain,
+.sun-cloud,
+.sun {
+  font-size: 58px;
+  padding: 20px 0 20px;
+  color: #203c5a;
+}
+span.temp {
+  font-size: x-small;
+  position: relative;
+  bottom: 4px;
+}
+
+span.temp-main {
+  font-size: small;
+  position: relative;
+  bottom: 25px;
+}
+
+:any-link {
+  text-decoration: none;
+  color: #0d6efd;
+}
+
+.upcoming-forecast {
+  background-color: #ece3f5;
+}
+
+#current-button {
+  background-color: rgb(217, 118, 226);
+  color: #fff;
+}
