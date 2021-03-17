@@ -27,7 +27,7 @@
       <div class="weather">
         <form id="weather-form">
           <div class="row">
-            <div class="col-7">
+            <div class="col-8">
               <input
                 type="search"
                 id="search-input"
@@ -57,11 +57,12 @@
         </form>
         <h1 id="city-name"></h1>
         <h3 id="current-time"></h3>
+        <h2 id="description"></h2>
         <div class="row justify-content-center">
-          <div class="col-md-2">
+          <div class="col-md-3">
             <i class="fas fa-cloud-rain rain-cloud"></i>
           </div>
-          <div class="col-md-3">
+          <div class="col-md-4">
             <h2>
               <span class="temperature"></span
               ><span class="temp-main">
@@ -75,6 +76,13 @@
               <br />
               Low: <span class="low-temp"></span>
               <span class="temp">°F/°C</span>
+            </p>
+          </div>
+          <div class="col-md-3">
+            <p class="weather-info">
+              Humidity: <span id="humidity"></span>
+              <br />
+              Wind Speed: <span id="wind-speed"></span>
             </p>
           </div>
         </div>
