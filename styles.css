@@ -42,9 +42,9 @@ span.temp {
 }
 
 span.temp-main {
-  font-size: small;
+  font-size: 20px;
   position: relative;
-  bottom: 25px;
+  bottom: 20px;
 }
 
 :any-link {
@@ -59,4 +59,9 @@ span.temp-main {
 #current-button {
   background-color: rgb(217, 118, 226);
   color: #fff;
+}
+
+.coder-info {
+  text-align: center;
+  font-size: small;
 }

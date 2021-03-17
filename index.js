@@ -37,10 +37,9 @@ function showCity(event) {
 }
 
 function displayWeather(response) {
-  let cityName = response.data.name;
-  let countryName = response.data.sys.country;
-  let displayCity = document.querySelector("#city-name");
-  displayCity.innerHTML = `${cityName}, ${countryName}`;
+  document.querySelector(
+    "#city-name"
+  ).innerHTML = `${response.data.name}, ${response.data.sys.country}`;
   document.querySelector(".temperature").innerHTML = Math.round(
     response.data.main.temp
   );
