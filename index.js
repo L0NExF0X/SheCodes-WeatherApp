@@ -1,6 +1,9 @@
 // Time
 function formatDate(now) {
   let hours = now.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
   let minutes = now.getMinutes();
   if (minutes < 10) {
     minutes = `0${minutes}`;
@@ -19,7 +22,7 @@ function formatDate(now) {
 }
 
 let now = new Date();
-let time = document.querySelector("h3");
+let time = document.querySelector("#current-time");
 time.innerHTML = formatDate(now);
 
 // City & Temp
@@ -40,6 +43,8 @@ function displayWeather(response) {
   document.querySelector(
     "#city-name"
   ).innerHTML = `${response.data.name}, ${response.data.sys.country}`;
+  document.querySelector("#description").innerHTML =
+    response.data.weather[0].description;
   document.querySelector(
     "#humidity"
   ).innerHTML = `${response.data.main.humidity}%`;
