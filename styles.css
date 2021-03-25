@@ -70,6 +70,9 @@ span.temp-main {
   font-size: 22px;
   margin: 0 auto;
   font-weight: 400;
+}
+
+#description:first-letter {
   text-transform: capitalize;
 }
 

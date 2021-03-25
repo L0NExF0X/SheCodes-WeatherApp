@@ -51,6 +51,9 @@ function displayWeather(response) {
   document.querySelector("#wind-speed").innerHTML = `${Math.round(
     response.data.wind.speed
   )} km/h`;
+  document.querySelector("#feels-like").innerHTML = Math.round(
+    response.data.main.feels_like
+  );
   document.querySelector(".temperature").innerHTML = Math.round(
     response.data.main.temp
   );
@@ -84,6 +87,7 @@ currentButton.addEventListener("click", currentPosition);
 
 search("Seattle");
 // Fahrenheit/Celsius Conversion
+// Change this to target units=metric to units=imperial in the apiUrl if no other solution
 function toFahrenheit(event) {
   event.preventDefault();
   let temp = document.querySelector(".temperature");
