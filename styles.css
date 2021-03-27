@@ -16,10 +16,8 @@ h2 {
   padding: 15px;
 }
 
-.rain-cloud {
-  font-size: 105px;
+#weather-icon {
   margin-top: 30px;
-  color: #203c5a;
 }
 
 .card {

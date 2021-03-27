@@ -63,6 +63,13 @@ function displayWeather(response) {
   document.querySelector(".low-temp").innerHTML = Math.round(
     response.data.main.temp_min
   );
+  let weatherIcon = document.querySelector("#weather-icon");
+
+  weatherIcon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  weatherIcon.setAttribute("alt", response.data.weather[0].description);
 }
 
 function currentLocation(position) {
