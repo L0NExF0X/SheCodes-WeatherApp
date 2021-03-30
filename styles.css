@@ -14,10 +14,11 @@ h2 {
   margin: 20px auto;
   max-width: 750px;
   padding: 15px;
+  color: #021020;
 }
 
 #weather-icon {
-  margin-top: 30px;
+  width: 150px;
 }
 
 .card {
@@ -33,13 +34,13 @@ h2 {
   padding: 20px 0 20px;
   color: #203c5a;
 }
-span.temp {
+.temp {
   font-size: x-small;
   position: relative;
   bottom: 4px;
 }
 
-span.temp-main {
+.temp-main {
   font-size: 20px;
   position: relative;
   bottom: 20px;
@@ -76,4 +77,9 @@ span.temp-main {
 
 .weather-info {
   margin-top: 20px;
+}
+
+.temp-main .active {
+  color: #021020;
+  cursor: default;
 }

@@ -40,6 +40,7 @@ function showCity(event) {
 }
 
 function displayWeather(response) {
+  celsiusTemp = response.data.main.temp;
   document.querySelector(
     "#city-name"
   ).innerHTML = `${response.data.name}, ${response.data.sys.country}`;
@@ -64,7 +65,6 @@ function displayWeather(response) {
     response.data.main.temp_min
   );
   let weatherIcon = document.querySelector("#weather-icon");
-
   weatherIcon.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
@@ -94,24 +94,28 @@ currentButton.addEventListener("click", currentPosition);
 
 search("Seattle");
 // Fahrenheit/Celsius Conversion
-// Change this to target units=metric to units=imperial in the apiUrl if no other solution
-function toFahrenheit(event) {
-  event.preventDefault();
-  let temp = document.querySelector(".temperature");
-  let temperature = temp.innerHTML;
-  temperature = Number(temperature);
-  temp.innerHTML = Math.round((temperature * 9) / 5 + 32);
-}
-let fahrenheitLink = document.querySelector("#fahrenheit");
-fahrenheitLink.addEventListener("click", toFahrenheit);
 
-function toCelsius(event) {
+function displayFahrenheit(event) {
   event.preventDefault();
   let temp = document.querySelector(".temperature");
-  let temperature = temp.innerHTML;
-  temperature = Number(temperature);
-  temp.innerHTML = Math.round(((temperature - 32) * 5) / 9);
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
+  temp.innerHTML = Math.round(fahrenheitTemp);
 }
+
+function displayCelsius(event) {
+  event.preventDefault();
+  let temp = document.querySelector(".temperature");
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  temp.innerHTML = Math.round(celsiusTemp);
+}
+
+let celsiusTemp = null;
+
+let fahrenheitLink = document.querySelector("#fahrenheit");
+fahrenheitLink.addEventListener("click", displayFahrenheit);
 
 let celsiusLink = document.querySelector("#celsius");
-celsiusLink.addEventListener("click", toCelsius);
+celsiusLink.addEventListener("click", displayCelsius);
