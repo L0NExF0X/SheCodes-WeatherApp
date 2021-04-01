@@ -28,7 +28,6 @@ function formatHours(timestamp) {
   return `${hours}:${minutes}`;
 }
 
-// City & Temp
 function search(city) {
   let apiKey = `321b4521c1f43612aed7e4d3fbabd5d7`;
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
@@ -48,18 +47,26 @@ function showCity(event) {
 
 function showForecast(response) {
   let upcomingForecast = document.querySelector("#forecast");
-  let forecast = response.data.list[0];
+  upcomingForecast.innerHTML = null;
+  let forecast = null;
 
-  upcomingForecast.innerHTML = `<div class="card-body upcoming-forecast">
-  <h5 class="card-title">${formatHours(forecast.dt * 1000)}</h5>
-  <img
-  src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png"
-  <p class="card-text">
-  H: ${Math.round(forecast.main.temp_max)}<span class="temp">°C</span>
-      <br />
-  L: ${Math.round(forecast.main.temp_min)}<span class="temp">°C</span>
-  </p>
-  </div>`;
+  for (let index = 0; index < 6; index++) {
+    forecast = response.data.list[index];
+    upcomingForecast.innerHTML += `
+    <div class="col-md-2">
+    <div class="text-center">
+    <h5 class="card-title">${formatHours(forecast.dt * 1000)}</h5>
+    <img
+    src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png"
+    <p class="card-text">
+    H: ${Math.round(forecast.main.temp_max)}<span class="temp">°C</span>
+    <br />
+    L: ${Math.round(forecast.main.temp_min)}<span class="temp">°C</span>
+    </p>
+    </div>
+    </div>
+    </div>`;
+  }
 }
 
 function displayWeather(response) {
@@ -123,7 +130,6 @@ let currentButton = document.querySelector("#current-button");
 currentButton.addEventListener("click", currentPosition);
 
 search("Seattle");
-// Fahrenheit/Celsius Conversion
 
 function displayFahrenheit(event) {
   event.preventDefault();
@@ -132,7 +138,6 @@ function displayFahrenheit(event) {
   fahrenheitLink.classList.add("active");
   let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
   temperature.innerHTML = Math.round(fahrenheitTemp);
-  document.querySelector(".temp").innerHTML = `°F`;
 }
 
 function displayCelsius(event) {
@@ -141,7 +146,6 @@ function displayCelsius(event) {
   celsiusLink.classList.add("active");
   fahrenheitLink.classList.remove("active");
   temperature.innerHTML = Math.round(celsiusTemp);
-  document.querySelector(".temp").innerHTML = `°C`;
 }
 
 let celsiusTemp = null;

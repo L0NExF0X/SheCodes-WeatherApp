@@ -25,15 +25,6 @@ h2 {
   word-wrap: normal;
 }
 
-.cloudy,
-.heavy-showers,
-.sun-rain,
-.sun-cloud,
-.sun {
-  font-size: 58px;
-  padding: 20px 0 20px;
-  color: #203c5a;
-}
 .temp {
   font-size: x-small;
   position: relative;
@@ -49,10 +40,6 @@ h2 {
 :any-link {
   text-decoration: none;
   color: #0d6efd;
-}
-
-.upcoming-forecast {
-  background-color: #ece3f5;
 }
 
 #current-button {
