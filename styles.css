@@ -65,8 +65,3 @@ h2 {
 .weather-info {
   margin-top: 20px;
 }
-
-.temp-main .active {
-  color: #021020;
-  cursor: default;
-}
