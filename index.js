@@ -50,7 +50,7 @@ function showForecast(response) {
   forecast.forEach(function (forecastDays, index) {
     if (index < 6) {
       weeklyForecast += `
-      <div class="col-md-4">
+      <div class="col-sm-4">
       <div class="text-center">
       <h5>${formatDays(forecastDays.dt)}</h5>
       <img

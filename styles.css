@@ -28,9 +28,10 @@ h2 {
 }
 
 .temp-main {
-  font-size: 20px;
+  font-size: 24px;
   position: relative;
-  bottom: 20px;
+  bottom: 16px;
+  right: 8px;
 }
 
 :any-link {
@@ -59,5 +60,9 @@ h2 {
 }
 
 .weather-info {
-  margin-top: 20px;
+  margin-top: 30px;
+}
+
+div.col-sm-4 {
+  padding: 0px;
 }
