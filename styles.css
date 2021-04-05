@@ -12,17 +12,13 @@ h2 {
   border-radius: 10px;
   background-image: linear-gradient(to top, #ebc0fd 0%, #d9ded8 100%);
   margin: 20px auto;
-  max-width: 750px;
+  max-width: 480px;
   padding: 15px;
   color: #021020;
 }
 
 #weather-icon {
   width: 150px;
-}
-
-.card {
-  word-wrap: normal;
 }
 
 .temp {

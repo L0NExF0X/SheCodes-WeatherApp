@@ -50,14 +50,14 @@ function showForecast(response) {
   forecast.forEach(function (forecastDays, index) {
     if (index < 6) {
       weeklyForecast += `
-      <div class="col-md-2">
+      <div class="col-md-4">
       <div class="text-center">
-      <h5 class="card-title">${formatDays(forecastDays.dt)}</h5>
+      <h5>${formatDays(forecastDays.dt)}</h5>
       <img
       src="http://openweathermap.org/img/wn/${
         forecastDays.weather[0].icon
       }@2x.png" />
-      <p class="card-text">
+      <p>
       H: ${Math.round(forecastDays.temp.max)}<span class="temp">°F</span>
       <br />
       L: ${Math.round(forecastDays.temp.min)}<span class="temp">°F</span>

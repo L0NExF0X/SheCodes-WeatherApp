@@ -22,7 +22,7 @@
       <div class="weather">
         <form id="weather-form">
           <div class="row">
-            <div class="col-8">
+            <div class="col-6">
               <input
                 type="search"
                 id="search-input"
@@ -32,7 +32,7 @@
                 class="form-control"
               />
             </div>
-            <div class="col-2">
+            <div class="col-3">
               <input
                 type="submit"
                 value="Search"
@@ -40,7 +40,7 @@
                 id="search-button"
               />
             </div>
-            <div class="col-2">
+            <div class="col-3">
               <input
                 type="submit"
                 value="Current"
@@ -50,27 +50,13 @@
             </div>
           </div>
         </form>
-        <h1 id="city-name"></h1>
-        <h3 id="current-time"></h3>
-        <h2 id="description"></h2>
-        <div class="row justify-content-center">
-          <div class="col-md-3">
-            <img src="" alt="" id="weather-icon" />
+        <div class="row">
+          <div class="col-md-7">
+            <h1 id="city-name"></h1>
+            <h3 id="current-time"></h3>
+            <h2 id="description"></h2>
           </div>
-          <div class="col-md-4">
-            <h2>
-              <span class="temperature"></span>
-              <span class="temp-main"> °F </span>
-            </h2>
-            <p>
-              High: <span class="high-temp"></span>
-              <span class="temp">°F</span>
-              <br />
-              Low: <span class="low-temp"></span>
-              <span class="temp">°F</span>
-            </p>
-          </div>
-          <div class="col-md-3">
+          <div class="col-md-5">
             <p class="weather-info">
               Feels like: <span id="feels-like"></span>
               <br />
@@ -80,11 +66,29 @@
             </p>
           </div>
         </div>
-        <div class="row mt-5" id="forecast">
-          <div class="col-md-2">
+        <div class="row justify-content-center">
+          <div class="col-4">
+            <img src="" alt="" id="weather-icon" />
+          </div>
+          <div class="col-4">
+            <h2>
+              <span class="temperature"></span>
+              <span class="temp-main">°F </span>
+            </h2>
+            <p>
+              High: <span class="high-temp"></span>
+              <span class="temp">°F</span>
+              <br />
+              Low: <span class="low-temp"></span>
+              <span class="temp">°F</span>
+            </p>
+          </div>
+        </div>
+        <div class="row mt-3" id="forecast">
+          <div class="col-md-4">
             <div class="text-center">
-              <h5 class="card-title"></h5>
-              <p class="card-text">
+              <h5></h5>
+              <p>
                 H: <span class="temp">°F</span>
                 <br />
                 L: <span class="temp">°F</span>
@@ -95,7 +99,11 @@
       </div>
       <p class="coder-info">
         This project was coded by
-        <a href="http://perezkatie94@gmail.com" target="_blank">Katie Pérez</a>
+        <a
+          href="https://www.linkedin.com/in/katie-pérez-069420666"
+          target="_blank"
+          >Katie Pérez</a
+        >
         and is
         <a
           href="https://github.com/L0NExF0X/SheCodes-WeatherApp"
